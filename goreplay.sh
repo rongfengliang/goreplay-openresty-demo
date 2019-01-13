@@ -1,2 +1,2 @@
 #!/bin/sh
-nohup goreplay --input-raw :80 --output-http "http://app"  --output-http "http://app2"  --output-http-elasticsearch es:9200/gor &
+nohup goreplay --input-raw :80 --output-http "http://app"  --output-http "http://app2"  --output-file /opt/log/requests.log --output-http-track-response  --output-http-elasticsearch es:9200/gor &
