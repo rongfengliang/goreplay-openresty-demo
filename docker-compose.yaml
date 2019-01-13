@@ -1,0 +1,14 @@
+version: "3"
+services:
+    nginx:
+      build: ./
+      ports:
+      - "8080:80"
+    app:
+      image: openresty/openresty:alpine-fat
+      ports:
+      - "8090:80"
+    app2:
+      image: openresty/openresty:alpine-fat
+      ports:
+      - "8091:80"
